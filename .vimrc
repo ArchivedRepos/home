@@ -1,5 +1,15 @@
 "Turn off compatability mode
 set nocompatible
+filetype off
+set rtp+=~/.vim/bundle/Vundle.vim
+call vundle#begin()
+Plugin 'gmarik/Vundle.vim'
+Plugin 'mattn/emmet-vim'
+Plugin 'pangloss/vim-javascript'
+Plugin 'mxw/vim-jsx.git'
+call vundle#end()
+filetype plugin indent on
+
 
 "Shows current typed command
 set showcmd
@@ -36,8 +46,10 @@ colorscheme seoul256
 set cul
 
 "Set tabs
-set tabstop=4
-set shiftwidth=4
+set expandtab
+"set tabstop=2
+set shiftwidth=2
+set softtabstop=2
 
 "Allow deleting previous items and indents
 set backspace=indent,eol,start
@@ -58,3 +70,15 @@ nnoremap <C-H> <C-W><C-H>
 "Change split behavior
 set splitbelow
 set splitright
+
+"ctrlp
+set runtimepath^=~/.vim/bundle/ctrlp.vim
+
+"emmet
+set runtimepath^=~/.vim/bundle/emmet-vim
+
+"ctrlp only searches working directory
+let g:ctrlp_working_path_mode = 0
+
+"ignore certain directories and files
+set wildignore+=*/node_modules/*,*/.git/*,*/tmp/*,*.so,*.swp,*.zip
