@@ -1,13 +1,6 @@
 "Turn off compatability mode
 set nocompatible
 filetype off
-set rtp+=~/.vim/bundle/Vundle.vim
-call vundle#begin()
-Plugin 'gmarik/Vundle.vim'
-Plugin 'mattn/emmet-vim'
-Plugin 'pangloss/vim-javascript'
-Plugin 'mxw/vim-jsx.git'
-call vundle#end()
 filetype plugin indent on
 
 
